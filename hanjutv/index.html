@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>韩剧tv-韩剧TV_韩国电视剧_韩剧排行榜_热播韩剧推荐</title>
+<meta name="description" content="韩剧tv是一个围绕韩国电视剧的观赏信息与内容整理站点，提供韩剧TV热播剧集、经典片单、演员导演资料、题材分类与选剧建议。这里帮助你了解韩国电视剧的类型差异、更新节奏与观看方式，按题材、年份、口碑维度挑选适合自己的韩剧，并掌握追剧前后的实用注意事项。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111a2b'/%3E%3Crect x='12' y='20' width='40' height='26' rx='4' fill='none' stroke='%23f0b429' stroke-width='3'/%3E%3Cpath d='M26 26l14 7-14 7z' fill='%23f0b429'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#141a24;
+  --ink-soft:#3c4657;
+  --paper:#f6f4ef;
+  --paper-2:#fffdf8;
+  --line:#e0dbd0;
+  --accent:#b4232c;
+  --accent-2:#f0b429;
+  --deep:#111a2b;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{line-height:1.35;margin:0;}
+p{margin:0 0 1em;}
+ul{margin:0 0 1em;padding-left:1.15em;}
+li{margin-bottom:.4em;}
+
+/* header */
+.site-head{
+  background:var(--deep);
+  color:#f4f1e8;
+  border-bottom:3px solid var(--accent);
+}
+.head-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:14px 20px 10px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:14px 22px;
+}
+.logo{
+  font-size:1.32rem;
+  font-weight:800;
+  letter-spacing:.5px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.logo .mark{
+  width:26px;height:26px;border:2px solid var(--accent-2);border-radius:5px;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:.7rem;color:var(--accent-2);
+}
+.head-nav{
+  display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.9rem;
+  margin-left:auto;
+}
+.head-nav a{color:#cfd4dd;padding:2px 0;border-bottom:1px solid transparent;}
+.head-nav a:hover{color:#fff;border-bottom-color:var(--accent-2);}
+
+/* hero */
+.hero{
+  background:linear-gradient(180deg,#111a2b 0%,#1c2637 100%);
+  color:#eef0f4;
+  padding:44px 20px 52px;
+  border-bottom:1px solid #26303f;
+}
+.hero-wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr;gap:36px;}
+.hero h1{
+  font-size:2.05rem;
+  font-weight:800;
+  margin-bottom:14px;
+  color:#fff;
+}
+.hero h1 em{color:var(--accent-2);font-style:normal;}
+.tagline{
+  font-size:1.02rem;color:#b9c2d0;margin-bottom:22px;max-width:44em;
+}
+.hero-points{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;}
+.hero-points li{
+  margin:0;
+  background:#212d40;
+  border:1px solid #33415a;
+  border-radius:4px;
+  padding:6px 12px;
+  font-size:.85rem;
+  color:#d5dbe5;
+}
+.hero-side{
+  background:#1a2333;
+  border:1px solid #2e3a4f;
+  border-radius:8px;
+  padding:18px 18px 8px;
+}
+.hero-side h2{
+  font-size:1rem;color:var(--accent-2);margin-bottom:12px;letter-spacing:.5px;
+}
+.hero-side dl{margin:0;font-size:.9rem;}
+.hero-side dt{color:#8f9aab;font-size:.8rem;margin-top:10px;}
+.hero-side dd{margin:2px 0 0;color:#e3e7ee;}
+
+/* layout */
+.layout{
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 20px;
+}
+section.block{padding:46px 0 8px;}
+.block-head{
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  border-bottom:2px solid var(--line);
+  padding-bottom:10px;margin-bottom:22px;
+}
+.block-head h2{
+  font-size:1.4rem;color:var(--deep);
+  position:relative;
+}
+.block-head h2::before{
+  content:"";display:inline-block;width:6px;height:18px;background:var(--accent);
+  margin-right:10px;vertical-align:-2px;border-radius:1px;
+}
+.block-head .note{font-size:.85rem;color:var(--ink-soft);}
+
+.prose p{color:var(--ink-soft);}
+.prose strong{color:var(--ink);}
+
+/* intro block */
+.intro-panel{
+  background:var(--paper-2);
+  border-left:4px solid var(--accent);
+  padding:20px 22px;
+  border-radius:0 6px 6px 0;
+  box-shadow:0 1px 0 var(--line);
+}
+
+/* genre cards */
+.genre-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.genre{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:16px 18px;
+}
+.genre h3{font-size:1.02rem;margin-bottom:6px;color:var(--deep);}
+.genre .tag{
+  display:inline-block;font-size:.72rem;color:#fff;background:var(--accent);
+  padding:1px 7px;border-radius:3px;margin-bottom:8px;letter-spacing:.5px;
+}
+.genre ul{font-size:.88rem;color:var(--ink-soft);margin-bottom:0;}
+
+/* list rows */
+.row-list{display:flex;flex-direction:column;gap:14px;}
+.row-item{
+  display:grid;grid-template-columns:120px 1fr;gap:18px;
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:16px 18px;
+}
+.row-item .label{
+  font-weight:700;color:var(--accent);font-size:.95rem;
+  border-right:1px dashed var(--line);padding-right:14px;
+}
+.row-item h3{font-size:1rem;margin-bottom:6px;color:var(--deep);}
+.row-item p{font-size:.9rem;color:var(--ink-soft);margin-bottom:.6em;}
+.row-item ul{font-size:.88rem;color:var(--ink-soft);margin-bottom:0;}
+
+/* steps */
+.steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step;
+}
+.step{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:6px;
+  padding:16px;position:relative;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;
+  background:var(--deep);color:var(--accent-2);border-radius:50%;
+  font-weight:700;font-size:.85rem;margin-bottom:8px;
+}
+.step h3{font-size:.95rem;margin-bottom:4px;}
+.step p{font-size:.86rem;color:var(--ink-soft);margin-bottom:0;}
+
+/* suggest table */
+.compare{
+  width:100%;border-collapse:collapse;font-size:.9rem;background:var(--paper-2);
+}
+.compare th,.compare td{
+  border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;
+}
+.compare th{background:#ece7db;color:var(--deep);font-weight:700;}
+.compare td{color:var(--ink-soft);}
+
+/* faq */
+.faq-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px 26px;}
+.faq-item{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:6px;
+  padding:14px 16px;
+}
+.faq-item h3{font-size:.95rem;color:var(--deep);margin-bottom:6px;}
+.faq-item p{font-size:.88rem;color:var(--ink-soft);margin-bottom:0;}
+
+/* cta */
+.cta{
+  background:var(--deep);color:#eef0f4;
+  border-radius:8px;padding:28px 26px;margin:44px 0 8px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;
+}
+.cta h2{font-size:1.25rem;color:#fff;flex:1 1 320px;}
+.cta p{flex:2 1 360px;color:#b9c2d0;font-size:.92rem;margin:0;}
+.cta .badge{
+  flex:0 0 auto;background:var(--accent-2);color:#1a1206;font-weight:700;
+  font-size:.85rem;padding:8px 16px;border-radius:4px;
+}
+
+/* footer */
+.site-foot{
+  background:#0d1420;color:#8b95a5;font-size:.85rem;
+  margin-top:40px;padding:26px 20px 34px;
+}
+.foot-inner{max-width:1180px;margin:0 auto;}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:12px;}
+.foot-links a{color:#a9b3c2;}
+.foot-links a:hover{color:#fff;}
+.site-foot p{margin:0 0 .5em;}
+
+@media (max-width:960px){
+  .hero-wrap{grid-template-columns:1fr;}
+  .genre-grid{grid-template-columns:1fr 1fr;}
+  .steps{grid-template-columns:1fr 1fr;}
+  .faq-wrap{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15px;}
+  .hero h1{font-size:1.55rem;}
+  .hero{padding:30px 16px 36px;}
+  .head-nav{margin-left:0;font-size:.85rem;gap:4px 12px;}
+  .genre-grid{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;}
+  .row-item{grid-template-columns:1fr;gap:8px;}
+  .row-item .label{border-right:none;border-bottom:1px dashed var(--line);padding:0 0 6px;}
+  .block-head h2{font-size:1.2rem;}
+  .compare{font-size:.82rem;}
+  .compare th,.compare td{padding:8px;}
+  .cta{padding:22px 18px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="head-inner">
+    <div class="logo"><span class="mark">TV</span>韩剧tv</div>
+    <nav class="head-nav" aria-label="主导航">
+      <a href="#meaning">主题说明</a>
+      <a href="#genre">题材分类</a>
+      <a href="#pick">选剧方法</a>
+      <a href="#track">追剧流程</a>
+      <a href="#suggest">推荐维度</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-wrap">
+    <div>
+      <h1>韩剧tv：看懂<em>韩国电视剧</em>的题材、片单与追剧节奏</h1>
+      <p class="tagline">从剧集类型、演员阵容到更新节奏与观感差异，先把韩剧tv相关的搜索需求讲清楚，再决定看哪一部。</p>
+      <ul class="hero-points">
+        <li>按题材与年份筛选</li>
+        <li>了解韩剧TV常见搜索内容</li>
+        <li>追剧前先看更新方式</li>
+        <li>区分剧集与综艺、电影</li>
+      </ul>
+    </div>
+    <aside class="hero-side" aria-label="快速信息">
+      <h2>先了解这几点</h2>
+      <dl>
+        <dt>主题性质</dt>
+        <dd>围绕韩国电视剧的内容与信息整理</dd>
+        <dt>适合人群</dt>
+        <dd>想找剧、想了解类型差异的观众</dd>
+        <dt>核心维度</dt>
+        <dd>题材、年份、集数、演员、口碑</dd>
+        <dt>阅读顺序</dt>
+        <dd>题材分类 → 选剧方法 → 追剧流程</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<div class="layout">
+
+<section class="block" id="meaning">
+  <div class="block-head">
+    <h2>韩剧tv到底指什么</h2>
+    <span class="note">先厘清概念，再谈内容</span>
+  </div>
+  <div class="intro-panel prose">
+    <p>很多访问者输入韩剧tv时，真实需求并不完全一样：有人想找近期热播的韩国电视剧，有人想确认某部剧的剧情类型和演员表，也有人只是习惯性地用这个说法来指代自己看韩剧的入口。因此，围绕韩剧tv建立一个清晰的说明页，比堆砌剧名更有价值。</p>
+    <p>这里把韩剧tv理解为一个与韩国电视剧观看、选剧和追剧相关的主题词，而不是某一家机构的官方名称。页面要做的是帮助访问者梳理：韩国电视剧大致分为哪些题材、不同题材适合什么样的观众、怎样根据集数和更新节奏安排时间、看到不熟悉的剧名时应该先查哪些信息。理解这些，再去搜索具体剧集，判断效率会高很多。</p>
+    <p>同时需要说明，韩国电视剧的播出平台、版权归属和上线渠道会随时间和地区变化。任何以韩剧tv为名的站点，都应当以可核实的信息为准，不虚构官方身份，也不承诺不存在的播放服务。本页提供的是观赏前的信息整理与选择思路，帮助你把“想看韩剧”这个模糊念头，拆解成可以一步步执行的动作。</p>
+  </div>
+</section>
+
+<section class="block" id="genre">
+  <div class="block-head">
+    <h2>韩国电视剧常见题材分类</h2>
+    <span class="note">用类型缩小范围，是选剧最快的一步</span>
+  </div>
+  <div class="prose" style="margin-bottom:20px;">
+    <p>面对数量庞大的韩剧，最有效率的做法不是一部部试看，而是先确定自己偏好的题材。题材决定了叙事节奏、情绪浓度和观众预期，也直接影响你会不会在前两集就弃剧。下面几类是目前韩国电视剧中讨论度较高、也相对容易区分的方向。</p>
+  </div>
+  <div class="genre-grid">
+    <div class="genre">
+      <span class="tag">情感</span>
+      <h3>爱情与都市情感</h3>
+      <p style="font-size:.88rem;color:var(--ink-soft);">以人物关系推进为主，节奏偏细腻，适合喜欢情绪铺垫的观众。</p>
+      <ul>
+        <li>看点：关系变化、台词与氛围</li>
+        <li>注意：前期节奏可能偏慢</li>
+        <li>适合：喜欢连续追看的观众</li>
+      </ul>
+    </div>
+    <div class="genre">
+      <span class="tag">悬疑</span>
+      <h3>悬疑与犯罪推理</h3>
+      <p style="font-size:.88rem;color:var(--ink-soft);">围绕案件或秘密展开，信息密度高，需要留意细节线索。</p>
+      <ul>
+        <li>看点：反转、线索回收</li>
+        <li>注意：部分剧集氛围较压抑</li>
+        <li>适合：喜欢动脑推理的观众</li>
+      </ul>
+    </div>
+    <div class="genre">
+      <span class="tag">家庭</span>
+      <h3>家庭与生活剧</h3>
+      <p style="font-size:.88rem;color:var(--ink-soft);">篇幅通常较长，人物众多，关注日常关系与现实议题。</p>
+      <ul>
+        <li>看点：群像与生活细节</li>
+        <li>注意：集数多，需要长期投入</li>
+        <li>适合：习惯固定时间追剧的人</li>
+      </ul>
+    </div>
+    <div class="genre">
+      <span class="tag">古装</span>
+      <h3>历史与古装剧</h3>
+      <p style="font-size:.88rem;color:var(--ink-soft);">设定在古代或架空历史背景，服饰、礼制与称谓是理解关键。</p>
+      <ul>
+        <li>看点：世界观与人物立场</li>
+        <li>注意：先了解基本背景更易入戏</li>
+        <li>适合：喜欢架空设定的观众</li>
+      </ul>
+    </div>
+    <div class="genre">
+      <span class="tag">职场</span>
+      <h3>职场与行业剧</h3>
+      <p style="font-size:.88rem;color:var(--ink-soft);">聚焦特定职业环境，剧情与专业场景结合，人物成长线清晰。</p>
+      <ul>
+        <li>看点：行业细节与团队关系</li>
+        <li>注意：部分术语需要边看边理解</li>
+        <li>适合：喜欢现实题材的观众</li>
+      </ul>
+    </div>
+    <div class="genre">
+      <span class="tag">奇幻</span>
+      <h3>奇幻与轻喜剧</h3>
+      <p style="font-size:.88rem;color:var(--ink-soft);">设定灵活，常与爱情、悬疑混合，观感轻松或脑洞较大。</p>
+      <ul>
+        <li>看点：设定创意与节奏感</li>
+        <li>注意：设定规则要看清前情</li>
+        <li>适合：想放松、换口味的观众</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pick">
+  <div class="block-head">
+    <h2>如何挑选一部适合自己的韩剧</h2>
+    <span class="note">从四个维度做减法</span>
+  </div>
+  <div class="row-list">
+    <article class="row-item">
+      <div class="label">维度一 · 时间</div>
+      <div>
+        <h3>先看集数与单集时长</h3>
+        <p>韩剧常见篇幅在十几集到二十集之间，也有篇幅更长的家庭剧。先确认总集数和单集时长，再对照自己每周能投入的时间，可以避免追到一半被迫放弃。</p>
+        <ul>
+          <li>短篇适合周末集中观看</li>
+          <li>长篇更适合固定时段追更</li>
+          <li>先看总时长再决定是否开始</li>
+        </ul>
+      </div>
+    </article>
+    <article class="row-item">
+      <div class="label">维度二 · 情绪</div>
+      <div>
+        <h3>判断自己当下想要的情绪</h3>
+        <p>想放松、想被感动、想紧张推理，对应的题材完全不同。先明确观看目的，再从韩剧tv相关内容里筛选标签，比盲目翻排行榜更省力。</p>
+        <ul>
+          <li>解压：轻喜剧与日常题材</li>
+          <li>沉浸：情感线完整的作品</li>
+          <li>刺激：悬疑与犯罪题材</li>
+        </ul>
+      </div>
+    </article>
+    <article class="row-item">
+      <div class="label">维度三 · 阵容</div>
+      <div>
+        <h3>参考演员与编导组合</h3>
+        <p>如果你有偏好的演员或编剧，优先查看其近年作品，往往比看宣传语更可靠。同一编剧的叙事风格通常有一定延续性，能帮助你预判节奏。</p>
+        <ul>
+          <li>留意主演近年的作品类型</li>
+          <li>编剧与导演决定整体调性</li>
+          <li>不要只看宣传头衔</li>
+        </ul>
+      </div>
+    </article>
+    <article class="row-item">
+      <div class="label">维度四 · 更新</div>
+      <div>
+        <h3>确认播出与更新情况</h3>
+        <p>不同剧集的播出安排差异很大。开看之前先了解是否已经完结、更新频率如何，能避免因等待过长而失去兴趣，也便于规划连续观看的节奏。</p>
+        <ul>
+          <li>已完结作品适合一次看完</li>
+          <li>连载作品需留意更新间隔</li>
+          <li>以可核实信息为准，不轻信传言</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="track">
+  <div class="block-head">
+    <h2>一套可执行的追剧流程</h2>
+    <span class="note">从模糊想法到具体片单</span>
+  </div>
+  <div class="prose" style="margin-bottom:20px;">
+    <p>把追剧当成一件需要安排的事，会明显减少“打开页面却不知道看什么”的困扰。下面四个步骤适用于大多数以韩剧tv为主题词的搜索场景，也适用于想系统整理自己片单的观众。</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <h3>确定题材方向</h3>
+      <p>先写下两到三个想看的类型，用题材缩小候选范围。</p>
+    </div>
+    <div class="step">
+      <h3>核对基本信息</h3>
+      <p>确认年份、集数、主演和大致剧情，排除明显不合口味的作品。</p>
+    </div>
+    <div class="step">
+      <h3>试看前两集</h3>
+      <p>用前两集判断节奏与人物是否吸引自己，再决定是否继续。</p>
+    </div>
+    <div class="step">
+      <h3>记录与调整</h3>
+      <p>把看过的剧和弃剧原因记下来，逐渐形成自己的偏好清单。</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="suggest">
+  <div class="block-head">
+    <h2>推荐维度对比与内容差异</h2>
+    <span class="note">不同筛选方式适合不同需求</span>
+  </div>
+  <div class="prose" style="margin-bottom:18px;">
+    <p>同样是找韩剧，用排行榜、按年份浏览和按题材分类，得到的结果差别很大。了解每种方式的特点，可以根据自己的状态选择更合适的那一种，而不是每次都从首页推荐开始翻。</p>
+  </div>
+  <table class="compare">
+    <thead>
+      <tr><th>筛选方式</th><th>适合场景</th><th>优点</th><th>需要注意</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>热播与讨论度</td>
+        <td>想跟上近期话题</td>
+        <td>信息集中，容易找到正在被讨论的剧</td>
+        <td>热度不等于个人口味，仍需看题材</td>
+      </tr>
+      <tr>
+        <td>按年份浏览</td>
+        <td>想补看某个时期的作品</td>
+        <td>便于观察题材与风格变化</td>
+        <td>年份早的作品画质与节奏差异较大</td>
+      </tr>
+      <tr>
+        <td>按题材分类</td>
+        <td>明确知道自己想看什么类型</td>
+        <td>命中率高，减少试错</td>
+        <td>部分作品跨类型，需看简介确认</td>
+      </tr>
+      <tr>
+        <td>按演员或编导</td>
+        <td>有明确偏好</td>
+        <td>风格预期稳定，容易找到相似作品</td>
+        <td>同一演员的作品质量仍有起伏</td>
+      </tr>
+      <tr>
+        <td>按口碑与评价</td>
+        <td>想降低踩雷概率</td>
+        <td>可参考多数观众的整体反馈</td>
+        <td>评价主观，需结合自身偏好判断</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="prose" style="margin-top:18px;">
+    <p>需要提醒的是，任何推荐都只是参考。韩剧tv相关页面上出现的剧名、简介和标签，可能因来源不同而存在差异，尤其是译名和集数。遇到不一致时，以多个来源交叉核对为准，不把单一页面的说法当作最终结论。对于尚未完结的作品，剧情走向和评价也会随播出变化，保持开放心态更合适。</p>
+    <p>另外，韩国电视剧与韩国综艺、电影在形式和观看方式上并不相同。搜索时如果发现内容偏向综艺或电影，说明关键词匹配出现了偏差，可以换用更具体的剧名或类型词继续查找。把主题词和具体需求结合，检索结果会准确得多。</p>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="block-head">
+    <h2>关于韩剧tv的常见问题</h2>
+    <span class="note">集中回答高频疑问</span>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <h3>韩剧tv是某个官方平台吗</h3>
+      <p>这个说法常被用作与韩国电视剧观看相关的主题词，并不特指某一家官方机构。不同站点使用该名称时，服务内容和信息来源可能完全不同，判断时应以页面实际提供的功能和可核实信息为准，不要默认其为官方渠道。</p>
+    </div>
+    <div class="faq-item">
+      <h3>想找某一部韩剧应该怎么搜</h3>
+      <p>建议用“剧名加年份”或“剧名加主演”的方式检索，能有效减少同名或译名差异带来的干扰。如果只记得剧情片段，可以先用题材关键词缩小范围，再逐步确认剧名，比直接输入韩剧tv更容易得到准确结果。</p>
+    </div>
+    <div class="faq-item">
+      <h3>韩剧一般多少集</h3>
+      <p>常见篇幅多在十几集到二十集左右，家庭题材或长篇连续剧可能更多。具体集数会因作品和版本不同而变化，开始观看前查看剧集基本信息，有助于安排时间，避免因篇幅超出预期而中途放弃。</p>
+    </div>
+    <div class="faq-item">
+      <h3>为什么同一部剧的译名不一样</h3>
+      <p>不同来源对剧名的翻译习惯不同，音译、意译和简称都可能造成差异，集数标注也可能因剪辑版本而不同。遇到这种情况，可以结合主演、播出年份和剧情简介交叉确认，避免把同一部作品误认为两部。</p>
+    </div>
+    <div class="faq-item">
+      <h3>追连载剧需要注意什么</h3>
+      <p>连载剧的更新间隔和总集数会直接影响观看体验。建议先确认当前进度和大致更新节奏，再决定是否立刻开看。如果等待时间较长，可以先看已完结的作品，或等积累一定集数后再连续观看。</p>
+    </div>
+    <div class="faq-item">
+      <h3>如何避免被夸张宣传误导</h3>
+      <p>宣传语往往突出卖点而省略节奏和风格信息。更稳妥的做法是查看剧情简介、题材标签和主演信息，并结合自身偏好判断。对无法核实的评分、排名和授权说法保持谨慎，不把单一来源的描述当作事实。</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>先定类型，再找剧名，追剧会轻松很多</h2>
+  <p>把韩剧tv当作一个整理思路的起点：明确自己想看的题材和可投入的时间，再去看具体作品信息，比盲目翻列表更有效率。</p>
+  <span class="badge">按需筛选</span>
+</div>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <nav class="foot-links" aria-label="页脚导航">
+      <a href="#meaning">主题说明</a>
+      <a href="#genre">题材分类</a>
+      <a href="#pick">选剧方法</a>
+      <a href="#track">追剧流程</a>
+      <a href="#suggest">推荐维度</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <p>本页围绕韩剧tv这一主题词，整理韩国电视剧的题材分类、选剧维度与追剧流程，帮助访问者更清晰地判断自己想看什么、如何查找与安排观看。</p>
+    <p>页面内容为信息整理与选择建议，不构成任何播放服务承诺；剧集信息请以可核实的公开来源为准。</p>
+  </div>
+</footer>
+
+</body>
+</html>
